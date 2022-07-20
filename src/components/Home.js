@@ -1,14 +1,14 @@
 
-function Home({ isSignedIn }) {
-  // if the user isn't signed in, redirect them to the login page
-  if (!isSignedIn) return <Redirect to="/login" />;
+import React from "react";
+import { Redirect } from "react-router-dom";
 
-  // otherwise, return the home page
+function Home({ isLoggedIn }) {
+  if (!isLoggedIn) return <Redirect to="/login" />;
+
   return (
     <div>
       <h1>Home!</h1>
     </div>
   );
 }
-
 export default Home;
